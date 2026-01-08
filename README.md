@@ -2,7 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://skj-skj.github.io/lrc-v2-to-v1/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Made with Claude](https://img.shields.io/badge/AI-Claude%20Sonnet%204.5-blueviolet)](https://claude.ai)
+
 
 A free, open-source web tool to convert LRC v2 (Enhanced LRC with word-level timestamps) to LRC v1 (Standard LRC with line-level timestamps). Perfect for music lovers, karaoke enthusiasts, and lyrics editors who need compatibility with older media players.
 
@@ -128,7 +128,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Created with the assistance of **Claude Sonnet 4.5** by Anthropic
+- Initial Scaffolding created with the assistance of **Claude Sonnet 4.5** by Anthropic
 - Inspired by the need for better LRC format compatibility
 - Thanks to the open-source community for LRC format documentation
 
@@ -143,7 +143,5 @@ If you encounter any issues or have suggestions:
 - Star ⭐ this repository if you find it useful!
 
 ---
-
-**Made with ❤️ and AI assistance from Claude Sonnet 4.5**
 
 [⬆ Back to Top](#-lrc-v2-to-v1-converter)

@@ -1,414 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>LRC v2 to v1 Converter - Free Online Lyrics Timestamp Converter Tool</title>
-    <meta name="title" content="LRC v2 to v1 Converter - Free Online Lyrics Timestamp Converter Tool">
-    <meta name="description" content="Free online tool to convert LRC v2 (Enhanced LRC with word-level timestamps) to LRC v1 (Standard LRC with line-level timestamps). Perfect for karaoke, music players, and lyrics synchronization. No installation required!">
-    <meta name="keywords" content="LRC converter, LRC v2 to v1, lyrics converter, karaoke converter, synchronized lyrics, lyric file converter, word-level timestamps, line-level timestamps, music lyrics tool, free LRC converter, online lyrics converter, LRC format converter">
-    <meta name="author" content="Created with Claude Sonnet 4.5">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://YOUR-USERNAME.github.io/lrc-v2-to-v1/">
-    <meta property="og:title" content="LRC v2 to v1 Converter - Free Online Lyrics Converter">
-    <meta property="og:description" content="Convert Enhanced LRC (v2) with word-level timestamps to Standard LRC (v1) with line-level timestamps. Free, fast, and works completely in your browser!">
-    <meta property="og:image" content="https://YOUR-USERNAME.github.io/lrc-v2-to-v1/og-image.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://YOUR-USERNAME.github.io/lrc-v2-to-v1/">
-    <meta property="twitter:title" content="LRC v2 to v1 Converter - Free Online Lyrics Converter">
-    <meta property="twitter:description" content="Convert Enhanced LRC (v2) with word-level timestamps to Standard LRC (v1) with line-level timestamps. Free, fast, and works completely in your browser!">
-    <meta property="twitter:image" content="https://YOUR-USERNAME.github.io/lrc-v2-to-v1/twitter-image.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://YOUR-USERNAME.github.io/lrc-v2-to-v1/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#667eea">
-    
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "LRC v2 to v1 Converter",
-      "description": "Free online tool to convert LRC v2 (Enhanced LRC with word-level timestamps) to LRC v1 (Standard LRC with line-level timestamps)",
-      "url": "https://YOUR-USERNAME.github.io/lrc-v2-to-v1/",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Any",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "Created with Claude Sonnet 4.5"
-      },
-      "browserRequirements": "Requires JavaScript. Requires HTML5.",
-      "softwareVersion": "1.0",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "1"
-      }
-    }
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            padding: 40px;
-            max-width: 800px;
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 2em;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 0.9em;
-        }
-
-        .input-section, .output-section {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-            color: #333;
-            font-weight: 600;
-        }
-
-        textarea {
-            width: 100%;
-            min-height: 200px;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            resize: vertical;
-            transition: border-color 0.3s;
-        }
-
-        textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        button {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .convert-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .convert-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .copy-btn {
-            background: #4caf50;
-            color: white;
-        }
-
-        .copy-btn:hover {
-            background: #45a049;
-            transform: translateY(-2px);
-        }
-
-        .reset-btn {
-            background: #f44336;
-            color: white;
-        }
-
-        .reset-btn:hover {
-            background: #da190b;
-            transform: translateY(-2px);
-        }
-
-        .output-section {
-            display: none;
-        }
-
-        .output-section.show {
-            display: block;
-            animation: fadeIn 0.3s;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Primary Meta Tags -->
+        <title>LRC v2 to v1 Converter - Free Online Lyrics Timestamp Converter Tool</title>
+        <meta name="title" content="LRC v2 to v1 Converter - Free Online Lyrics Timestamp Converter Tool">
+        <meta name="description" content="Free online tool to convert LRC v2 (Enhanced LRC with word-level timestamps) to LRC v1 (Standard LRC with line-level timestamps). Perfect for karaoke, music players, and lyrics synchronization. No installation required!">
+        <meta name="keywords" content="LRC converter, LRC v2 to v1, lyrics converter, karaoke converter, synchronized lyrics, lyric file converter, word-level timestamps, line-level timestamps, music lyrics tool, free LRC converter, online lyrics converter, LRC format converter">
+        <meta name="author" content="skj-skj">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="English">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://skj-skj.github.io/lrc-v2-to-v1/">
+        <meta property="og:title" content="LRC v2 to v1 Converter - Free Online Lyrics Converter">
+        <meta property="og:description" content="Convert Enhanced LRC (v2) with word-level timestamps to Standard LRC (v1) with line-level timestamps. Free, fast, and works completely in your browser!">
+        <meta property="og:image" content="https://skj-skj.github.io/lrc-v2-to-v1/og-image.png">
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://skj-skj.github.io/lrc-v2-to-v1/">
+        <meta property="twitter:title" content="LRC v2 to v1 Converter - Free Online Lyrics Converter">
+        <meta property="twitter:description" content="Convert Enhanced LRC (v2) with word-level timestamps to Standard LRC (v1) with line-level timestamps. Free, fast, and works completely in your browser!">
+        <meta property="twitter:image" content="https://skj-skj.github.io/lrc-v2-to-v1/twitter-image.png">
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://skj-skj.github.io/lrc-v2-to-v1/">
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Theme Color -->
+        <meta name="theme-color" content="#667eea">
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "LRC v2 to v1 Converter",
+              "description": "Free online tool to convert LRC v2 (Enhanced LRC with word-level timestamps) to LRC v1 (Standard LRC with line-level timestamps)",
+              "url": "https://skj-skj.github.io/lrc-v2-to-v1/",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "creator": {
+                "@type": "Person",
+                "name": "skj-skj"
+              },
+              "browserRequirements": "Requires JavaScript. Requires HTML5.",
+              "softwareVersion": "1.0"
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .message {
-            text-align: center;
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 5px;
-            font-weight: 500;
-            display: none;
-        }
-
-        .message.success {
-            background: #d4edda;
-            color: #155724;
-            display: block;
-        }
-
-        .message.error {
-            background: #f8d7da;
-            color: #721c24;
-            display: block;
-        }
-
-        .info-section {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 30px;
-            border-left: 4px solid #667eea;
-        }
-
-        .info-section h2 {
-            color: #333;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-
-        .info-section p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .info-section ul {
-            margin-left: 20px;
-            color: #666;
-            line-height: 1.8;
-        }
-
-        footer {
-            text-align: center;
-            color: white;
-            margin-top: 30px;
-            font-size: 0.9em;
-            max-width: 800px;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 1.5em;
-            }
-            
-            .button-group {
-                flex-direction: column;
-            }
-            
-            button {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <main class="container">
-        <header>
-            <h1>🎵 LRC v2 to v1 Converter</h1>
-            <p class="subtitle">Convert Enhanced LRC (word-by-word) to Standard LRC (line-by-line)</p>
-        </header>
-
-        <section class="input-section">
-            <label for="inputLrc">Paste your LRC v2 content:</label>
-            <textarea 
-                id="inputLrc" 
-                aria-label="Input LRC v2 content"
-                placeholder="[00:12.00] <00:12.30> Hello <00:12.60> world&#10;[00:15.00] <00:15.50> Example <00:16.00> lyrics"
-            ></textarea>
-            
-            <div class="button-group">
-                <button class="convert-btn" onclick="convertLrc()" aria-label="Convert LRC v2 to v1">Convert</button>
-            </div>
-        </section>
-
-        <section class="output-section" id="outputSection">
-            <label for="outputLrc">Converted LRC v1:</label>
-            <textarea 
-                id="outputLrc" 
-                readonly 
-                aria-label="Output LRC v1 content"
-            ></textarea>
-            
-            <div class="button-group">
-                <button class="copy-btn" onclick="copyToClipboard()" aria-label="Copy converted lyrics to clipboard">Copy</button>
-                <button class="reset-btn" onclick="resetConverter()" aria-label="Reset converter and clear all fields">Reset</button>
-            </div>
-        </section>
-
-        <div class="message" id="message" role="status" aria-live="polite"></div>
-
-        <article class="info-section">
-            <h2>About LRC Format Conversion</h2>
-            <p>This free online tool converts LRC v2 (Enhanced LRC) files to LRC v1 (Standard LRC) format. Perfect for ensuring compatibility with older media players, karaoke applications, and music streaming services.</p>
-            
-            <h3 style="font-size: 1.1em; margin-top: 15px; color: #333;">What's the difference?</h3>
-            <ul>
-                <li><strong>LRC v1:</strong> Standard format with line-level timestamps only - [00:12.00] Hello world</li>
-                <li><strong>LRC v2:</strong> Enhanced format with word-level timestamps - [00:12.00] &lt;00:12.30&gt; Hello &lt;00:12.60&gt; world</li>
-            </ul>
-            
-            <p style="margin-top: 15px;">This converter removes word-level timing data while preserving line-level synchronization, making your lyrics compatible with virtually all music players and karaoke software.</p>
-        </article>
-    </main>
-
-    <footer>
-        <p>Created with assistance from <strong>Claude Sonnet 4.5</strong> by Anthropic | 
-        <a href="https://github.com/YOUR-USERNAME/lrc-v2-to-v1" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
-        <p style="margin-top: 10px; font-size: 0.85em;">Free, open-source, and privacy-friendly. Your lyrics never leave your browser.</p>
-    </footer>
-
-    <script>
-        function convertLrc() {
-            const input = document.getElementById('inputLrc').value.trim();
-            const outputSection = document.getElementById('outputSection');
-            const outputTextarea = document.getElementById('outputLrc');
-            const message = document.getElementById('message');
-
-            message.className = 'message';
-            message.textContent = '';
-
-            if (!input) {
-                showMessage('Please paste some LRC content first!', 'error');
-                return;
-            }
-
-            try {
-                const lines = input.split('\n');
-                const converted = [];
-
-                for (let line of lines) {
-                    line = line.trim();
-                    if (!line) continue;
-
-                    const timeMatch = line.match(/^\[(\d+:\d+\.\d+)\]/);
-                    if (timeMatch) {
-                        const timestamp = timeMatch[1];
-                        
-                        let text = line.substring(timeMatch[0].length);
-                        text = text.replace(/<\d+:\d+\.\d+>/g, '').trim();
-                        text = text.replace(/^v\d+:/i, '').trim();
-                        
-                        converted.push(`[${timestamp}] ${text}`);
-                    } else {
-                        converted.push(line);
-                    }
-                }
-
-                outputTextarea.value = converted.join('\n');
-                outputSection.classList.add('show');
-                showMessage('Conversion successful!', 'success');
-            } catch (error) {
-                showMessage('Error during conversion. Please check your input.', 'error');
-            }
-        }
-
-        function copyToClipboard() {
-            const outputTextarea = document.getElementById('outputLrc');
-            outputTextarea.select();
-            document.execCommand('copy');
-            showMessage('Copied to clipboard!', 'success');
-        }
-
-        function resetConverter() {
-            document.getElementById('inputLrc').value = '';
-            document.getElementById('outputLrc').value = '';
-            document.getElementById('outputSection').classList.remove('show');
-            document.getElementById('message').className = 'message';
-            document.getElementById('message').textContent = '';
-        }
-
-        function showMessage(text, type) {
-            const message = document.getElementById('message');
-            message.textContent = text;
-            message.className = `message ${type}`;
-            
-            if (type === 'success') {
-                setTimeout(() => {
-                    message.className = 'message';
-                }, 3000);
-            }
-        }
-    </script>
-</body>
+        </script>
+    </head>
+    <body>
+        <script type="module" src="./src/main.js"></script>
+        <main class="container">
+            <header>
+                <h1>🎵 LRC v2 to v1 Converter</h1>
+                <p class="subtitle">Convert Enhanced LRC (word-by-word) to Standard LRC (line-by-line)</p>
+            </header>
+            <section class="input-section">
+                <label for="inputLrc">Paste your LRC v2 content:</label>
+                <textarea 
+                    id="inputLrc" 
+                    aria-label="Input LRC v2 content"
+                    placeholder="[00:12.00] <00:12.30> Hello <00:12.60> world&#10;[00:15.00] <00:15.50> Example <00:16.00> lyrics"
+                    ></textarea>
+                <div class="button-group">
+                    <button class="convert-btn" aria-label="Convert LRC v2 to v1">Convert</button>
+                </div>
+            </section>
+            <section class="output-section" id="outputSection">
+                <label for="outputLrc">Converted LRC v1:</label>
+                <textarea 
+                    id="outputLrc" 
+                    readonly 
+                    aria-label="Output LRC v1 content"
+                    ></textarea>
+                <div class="button-group">
+                    <button class="copy-btn" aria-label="Copy converted lyrics to clipboard">Copy</button>
+                    <button class="reset-btn" aria-label="Reset converter and clear all fields">Reset</button>
+                </div>
+            </section>
+            <div class="message" id="message" role="status" aria-live="polite"></div>
+            <article class="info-section">
+                <h2>About LRC Format Conversion</h2>
+                <p>This free online tool converts LRC v2 (Enhanced LRC) files to LRC v1 (Standard LRC) format. Perfect for ensuring compatibility with older media players, karaoke applications, and music streaming services.</p>
+                <h3 style="font-size: 1.1em; margin-top: 15px; color: #333;">What's the difference?</h3>
+                <ul>
+                    <li><strong>LRC v1:</strong> Standard format with line-level timestamps only - [00:12.00] Hello world</li>
+                    <li><strong>LRC v2:</strong> Enhanced format with word-level timestamps - [00:12.00] &lt;00:12.30&gt; Hello &lt;00:12.60&gt; world</li>
+                </ul>
+                <p style="margin-top: 15px;">This converter removes word-level timing data while preserving line-level synchronization, making your lyrics compatible with virtually all music players and karaoke software.</p>
+            </article>
+        </main>
+        <footer>
+            <p><a href="https://github.com/skj-skj/lrc-v2-to-v1" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Free, open-source, and privacy-friendly. Your lyrics never leave your browser.</p>
+        </footer>
+    </body>
 </html>
